@@ -46,6 +46,19 @@ page for details on all of these)
   - `cargo new message`
   - `cd message`
   - `cargo run`
+      If you get an error, add the following in `~/.cargo/config`:
+      ```yaml
+      [target.x86_64-apple-darwin]
+      rustflags = [
+        "-C", "link-arg=-undefined",
+        "-C", "link-arg=dynamic_lookup",
+      ]
+
+      [target.aarch64-apple-darwin]
+      rustflags = [
+        "-C", "link-arg=-undefined",
+        "-C", "link-arg=dynamic_lookup",
+      ]```
   - Edit `src/main.rs` and change the message.
   - `cargo run` again to see your new message.
 - [ ] Check out the descriptions of the tools and books.
