@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
-	"name": "Ubuntu",
+	"name": "Rust Ultimate Crash Course",
 	"image": "mcr.microsoft.com/devcontainers/base:jammy",
 	"customizations": {
 		"vscode": {
@@ -16,41 +16,11 @@
 			]
 		}
 	},
-	// "runArgs": [
-	// 	"--init",
-	// 	"--privileged"
-	// ],
-	// "overrideCommand": false,
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
 		"ghcr.io/devcontainers/features/rust:1": {},
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
 	},
-	"mounts": [
-		{
-			"source": "dind-var-lib-docker-${devcontainerId}",
-			"target": "/var/lib/docker",
-			"type": "volume"
-		}
-	],
-	// "runArgs": [
-	// 	"--init"
-	// ],
-	// "mounts": [
-	// 	"source=/var/run/docker.sock,target=/var/run/docker-host.sock,type=bind"
-	// ],
-	// "remoteUser": "vscode",
-	// "runArgs": [
-	// 	"--userns=keep-id"
-	// ],
-	// "containerUser": "vscode"
-	// "overrideCommand": false
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "uname -a",
-	// Configure tool-specific properties.
-	// "customizations": {},
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	"remoteUser": "root"
 }
