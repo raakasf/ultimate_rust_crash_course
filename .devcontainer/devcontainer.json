@@ -12,7 +12,10 @@
 				"yzhang.markdown-all-in-one",
 				"EditorConfig.EditorConfig",
 				"ms-azuretools.vscode-docker",
-				"tamasfe.even-better-toml"
+				"tamasfe.even-better-toml",
+				"Swellaby.rust-pack",
+				"swellaby.vscode-rust-test-adapter",
+				"hbenl.vscode-test-explorer"
 			]
 		}
 	},

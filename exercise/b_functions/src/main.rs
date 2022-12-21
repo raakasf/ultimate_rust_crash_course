@@ -32,9 +32,30 @@ fn area_of(x: i32, y: i32) -> i32 {
     // 2a. Fix this function to correctly compute the area of a rectangle given
     // dimensions x and y by multiplying x and y and returning the result.
     //
-    return 0;
+    if x < 0 || y < 0 {
+        panic!("Cannot calculate area for negative numbers")
+    }
+
+    return x * y;
     // Challenge: It isn't idiomatic (the normal way a Rust programmer would do things) to use
     //            `return` on the last line of a function. Change the last line to be a
     //            "tail expression" that returns a value without using `return`.
     //            Hint: `cargo clippy` will warn you about this exact thing.
+}
+
+#[cfg(test)]
+mod tests {
+    // Note this useful idiom: importing names from outer (for mod tests) scope.
+    use super::*;
+
+    #[test]
+    fn test_area_of() {
+        assert_eq!(area_of(1, 2), 2);
+    }
+
+    #[test]
+    #[should_panic(expected = "Cannot calculate area for negative numbers")]
+    fn test_bad_area_of() {
+        area_of(-1, 2);
+    }
 }
