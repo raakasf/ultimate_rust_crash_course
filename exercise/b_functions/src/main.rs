@@ -25,7 +25,7 @@ fn main() {
     //
     // If you get stuck, remember that this is *very* similar to what `area_of` does.
     //
-    //println!("Volume is {}", volume(width, height, depth));
+    println!("Volume is {}", volume(width, height, depth));
 }
 
 /// The next function calculates area of two numbers.
@@ -53,7 +53,7 @@ fn area_of(x: i32, y: i32) -> i32 {
         panic!("Cannot calculate area for negative numbers")
     }
 
-    x * y;
+    x * y
     // Challenge: It isn't idiomatic (the normal way a Rust programmer would do things) to use
     //            `return` on the last line of a function. Change the last line to be a
     //            "tail expression" that returns a value without using `return`.
@@ -75,4 +75,8 @@ mod tests {
     fn test_bad_area_of() {
         area_of(-1, 2);
     }
+}
+
+fn volume(width: i32, height: i32, depth: i32) -> i32 {
+    area_of(width, height) * depth
 }
