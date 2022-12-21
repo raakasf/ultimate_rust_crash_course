@@ -28,6 +28,23 @@ fn main() {
     //println!("Volume is {}", volume(width, height, depth));
 }
 
+/// The next function calculates area of two numbers.
+///
+/// # Examples
+///
+/// ```
+/// let result = area_of(10, 2);
+/// assert_eq!(result, 20);
+/// ```
+///
+/// # Panics
+///
+/// The function panics if the second argument is zero.
+///
+/// ```rust,should_panic
+/// // panics on negative number
+/// area_of(10, -1);
+/// ```
 fn area_of(x: i32, y: i32) -> i32 {
     // 2a. Fix this function to correctly compute the area of a rectangle given
     // dimensions x and y by multiplying x and y and returning the result.
